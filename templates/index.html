@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://r.mobirisesite.com/1083693/assets/images/pompompurin-favicon.png" type="image/x-icon">
+    <title>Happy Birthday P'Loogkwang</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&display=swap">
+
+    <style>
+        @font-face {
+            font-family: 'Brygada 1918';
+            src: url('https://fonts.gstatic.com/s/brygada1918/v25/pe0pMI6eKpdGqlF5LANrM--qBP5v.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Brygada 1918', serif;
+            background-color: #fff7d5;
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .navbar {
+            background-color: #fcd057;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #4f2c1d;
+        }
+
+        .hero-section {
+            background-image: url('https://r.mobirisesite.com/1083693/assets/images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: #4f2c1d;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeInUp 1.5s;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-primary {
+            background-color: #fcd057;
+            border: none;
+            color: #4f2c1d;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #fce494;
+        }
+
+        .gallery-section img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gif-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .btn-home {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4f2c1d;
+            color: #fcd057;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-home:hover {
+            background-color: #fce494;
+            color: #4f2c1d;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">For P'Loogkwang ⋆｡‧˚ʚ♡ɞ˚‧｡⋆</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <h1>Happy Birthday, P'Loogkwang!</h1>
+    <p>You're 19 now! I know I might have missed wishing you last year, but from this year onwards, </p>
+    <p>I'll always be here to celebrate your special day with you.
+        Wishing you all that you want and more this year, and may you be healthy and happy.</p>
+    <p>And remember, 
+        if there is ever anything on your mind, you can always talk to me.</p>
+    <p>I'll be right here, ready to support you through anything.
+        I care for you so much, and I love you so much.</p>
+    <p>  From Radar ❤️</p>
+    <button class="btn-home" onclick="window.location.href='{{ url_for('gallery') }}'">click ! !</button>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/sanrio-pom-pom-purin.gif') }}" alt="Pompompurin GIF" class="img-fluid">
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Memories Together</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/WIFV8268.JPG') }}" alt="Memory 1">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/IMG_5477.JPG') }}" alt="Memory 2">
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='images/JNJK1714.JPG') }}" alt="Memory 3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Ensure smooth navigation to gallery.html
+    document.querySelector('.btn-primary').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'gallery.html';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

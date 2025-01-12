@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcd057;
+            color: #4f2c1d;
+        }
+        .gallery-header {
+            text-align: center;
+            padding: 64px 0;
+        }
+        .gallery-header h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .w3-row-padding img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #fff3e0;
+            padding: 64px 0;
+            text-align: center;
+        }
+        footer i {
+            margin: 0 8px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        footer i:hover {
+            color: #4f2c1d;
+        }
+        .btn-home {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4f2c1d;
+            color: #fcd057;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-home:hover {
+            background-color: #fce494;
+            color: #4f2c1d;
+        }
+    </style>
+</head>
+<body>
+
+<header class="gallery-header">
+    <h1>Gallery</h1>
+    <p>Happy Baby Birthday Na Ka</p>
+</header>
+
+<div class="w3-content" style="max-width:1500px">
+    <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
+        <div class="w3-third">
+            <img src="{{ url_for('static', filename='images/1.JPG') }}">
+            <img src="{{ url_for('static', filename='images/4.JPG') }}">
+        </div>
+        <div class="w3-third">
+            <img src="{{ url_for('static', filename='images/10.JPG') }}">
+            <img src="{{ url_for('static', filename='images/IMG_5477.JPG') }}">
+        </div>
+        <div class="w3-third">
+            <img src="{{ url_for('static', filename='images/WIFV8268.JPG') }}">
+            <img src="{{ url_for('static', filename='images/12.PNG') }}">
+        </div>
+    </div>
+</div>
+
+<button class="btn-home" onclick="window.location.href='{{ url_for('index') }}'">Home</button>
+
+<footer>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p>Ruk Baby Tee Sud<br>( ̳• · • ̳)<br>/    づ♡</p>
+</footer>
+
+</body>
+</html>
